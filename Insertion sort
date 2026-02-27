@@ -1,0 +1,29 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+       int nums[] = { 6, 4 ,23, 0 ,1, 2};
+       int size = nums.length;
+       System.out.println("Before sorting");
+       for(int num: nums){
+           System.out.print(num + " ");
+       }
+       
+       for(int i = 1; i< size ; i++){
+           int key = nums[i];
+           int j = i-1;
+           
+           while (j>=0 && nums[j]>key){
+               nums[j+1]=nums[j];
+               j--;
+           }
+           nums[j+1]=key;
+           
+       }
+       System.out.println("\nAfter sorting");
+       for(int num: nums){
+           System.out.print(num + " ");
+       }
+    }
+}
