@@ -1,0 +1,35 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter a number to check it is prime or not");
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        
+        String result = classifyNumber(n);
+        
+        System.out.println(n + " is " + result);
+    }
+
+    public static String classifyNumber(int n){
+        if (n <= 1) {
+            return "neither prime nor composite";
+        }
+
+        if (n <= 3) {
+            return "a prime number";
+        }
+
+        if (n % 2 == 0 || n % 3 == 0) {
+            return "a composite number";
+        }
+
+        for (int i = 5; i * i <= n; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0) {
+                return "a composite number";
+            }
+        }
+
+        return "a prime number";
+    }
+}
