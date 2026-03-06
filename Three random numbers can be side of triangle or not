@@ -1,0 +1,19 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter 3 numbers to check it can be sides of a triangle or not");
+        Scanner sc = new Scanner(System.in);
+        int number1 = sc.nextInt();
+        int number2 = sc.nextInt();
+        int number3 = sc.nextInt();
+        
+        if(number1+number2>number3 && number1+number3>number2 && number2+number3>number1){
+            System.out.println("Valid Triangle");
+        }
+        else{
+             System.out.println("InValid Triangle");
+        }
+        
+    }
+}
