@@ -1,0 +1,13 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter a number to print its absolute value");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        if(number < 0){
+            int result = number*(-1);
+            System.out.println("The absolute value of "+number+" is "+ result);
+        }
+    }
+}
