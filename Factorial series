@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class Main{
+  
+  public static void main(String args[]){
+    
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number of which u want factorial");
+    int num = sc.nextInt();
+    
+    //5! = 5*4!
+    //4! = 4*3!
+    int result = factorial(num);
+    System.out.println(result);
+    
+    
+    
+  }
+  
+  public static int factorial(int num){
+    if(num==1 || num==0){
+      return 1;
+    }
+
+    return num*factorial(num-1);
+  }
+  
+}
