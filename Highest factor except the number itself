@@ -1,0 +1,23 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of which we want to find the highest factor except the number itself");
+        int num = sc.nextInt();
+        int highestFactor = 1;
+        for(int i = num-1 ; i>=1 ; i--){
+          if(num%i == 0){
+            highestFactor = i;
+            break;
+          }
+          
+        }
+        System.out.println("The highest Factor of the "+ num +" is "+highestFactor);
+        
+        
+    }
+}
